@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/monsterCreatorFragment">
+
+    <fragment
+        android:id="@+id/monsterCreatorFragment"
+        android:name="cl.serlitoral.desafiokotlinmonster.view.monster.MonsterCreatorFragment"
+        android:label="fragment_monster_creator"
+        tools:layout="@layout/fragment_monster_creator" >
+        <action
+            android:id="@+id/action_monsterCreatorFragment_to_monsterDetailFragment"
+            app:destination="@id/monsterDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monsterBottomDialogFragment"
+        android:name="cl.serlitoral.desafiokotlinmonster.view.monsteravatars.MonsterBottomDialogFragment"
+        android:label="layout_monster_bottom_fragment"
+        tools:layout="@layout/layout_monster_bottom_fragment" />
+    <fragment
+        android:id="@+id/monsterDetailFragment"
+        android:name="cl.serlitoral.desafiokotlinmonster.view.monster.MonsterDetailFragment"
+        android:label="fragment_monster_detail"
+        tools:layout="@layout/fragment_monster_detail" >
+        <action
+            android:id="@+id/action_monsterDetailFragment_to_monsterCreatorFragment"
+            app:destination="@id/monsterCreatorFragment" />
+        <action
+            android:id="@+id/action_monsterDetailFragment_to_monsterBottomDialogFragment"
+            app:destination="@id/monsterBottomDialogFragment" />
+    </fragment>
+</navigation>
